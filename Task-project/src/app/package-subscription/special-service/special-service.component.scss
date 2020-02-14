@@ -1,0 +1,37 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  .background{
+      background-image: url("../../../assets/Images/netflix-tv.webp");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .recharge-comp{
+      margin-left: 7%;
+      color:blanchedalmond;
+  }
+  .recharge{
+      width:32%;
+  }
+  .heading-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading {
+      font-family:Georgia, 'Times New Roman', Times, serif; 
+      color:blanchedalmond;
+  }
+
+  .sub-header{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .recharge-done{
+    width:40%;
+    color: blanchedalmond;
+  }
+  

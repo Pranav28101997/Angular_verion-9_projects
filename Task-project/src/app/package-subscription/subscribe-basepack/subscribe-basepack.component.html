@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="background">
+<div class="bg">
+  <div class="recharge-comp" *ngIf="beforeSubscription">
+    <h1 class="heading">subscribe your Favourite Packs</h1>
+    <form #subscription="ngForm">
+        <div class="form-group recharge">
+          <label for="exampleInputEmail1" >Enter the pack name </label>
+          <input type="text" class="form-control" name="pack"
+           placeholder="Enter Gold or silver" [(ngModel)]="pack">
+           <p id="emailHelp" *ngIf="validation" class="form-text text-danger">Enter Valid details</p>
+        </div>
+        <div class="form-group recharge">
+          <label for="exampleInputPassword1">Enter Number of Months</label>
+          <input type="text" class="form-control"  name="months" 
+           placeholder="Months" [(ngModel)]="months">
+           <p id="emailHelp" *ngIf="validation" class="form-text text-danger">Enter Valid Month</p>
+        </div>
+        <div>
+        <button type="submit" (click)="onSubmit()" class="btn btn-primary">Subscribe Now</button></div><br>
+        <div *ngIf="onclick">
+            <button type="submit" (click)="onSubmit()" class="btn btn-primary" routerLink="/package-subscription">Home Page</button></div><br>
+      </form> 
+  </div>
+  <div class="recharge-comp"  *ngIf="afterSubscription">
+        <h1 class="heading"> You have Successfully subscribed {{pack}} Pack</h1>
+        <form #rechargeForm="ngForm">
+                <div class="form-group recharge-done" >
+                        <h3 class="heading">‣ Monthly price - {{monthlyPrice}} ₹</h3>
+                      </div>
+                      <div class="form-group recharge-done">
+                            <h3 class="heading"> ‣ Number of Months are - {{months}} ₹</h3>
+                      </div>
+                      <div class="form-group recharge-done">
+                            <h3 class="heading">‣ Total Subscription Amount - {{totalAmount}} ₹</h3>
+                      </div>
+                      <div class="form-group recharge-done">
+                            <h3 class="heading">‣ Total Discount Applied - {{discountAmount}} ₹</h3>
+                      </div>
+                      <div class="form-group recharge-done">
+                            <h3 class="heading">‣ Final price after Discount - {{finalprice}} ₹</h3>
+                      </div>
+                      <div class="form-group recharge-done">
+                            <h3 class="heading">‣ Total Account Balance - {{accountBalance}} ₹</h3>
+                      </div>
+                      <div class="form-group recharge-done">
+                            <h3 class="heading">‣ Email and Message notification sent Successfully !!</h3>
+                      </div>          
+          </form> 
+      </div>
+</div>
+</div>
+</body>
+</html>

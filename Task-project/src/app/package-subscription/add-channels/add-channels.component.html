@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="background">
+<div class="bg">
+  <div class="recharge-comp">
+    <h1 class="heading">Add channels to existing subscription</h1>
+    <form #rechargeForm="ngForm">
+        <div class="form-group recharge">
+          <label for="exampleInputEmail1" >Enter Channels</label>
+          <input type="text" class="form-control" name="channels"
+           placeholder="Channel Lists" [(ngModel)]="channels">
+        </div>
+        <div>
+        <button type="submit" (click)="onSubmit()" [disabled]="onclick" class="btn btn-primary">Add Channels</button></div><br>
+        <div *ngIf="onclick">
+            <button type="submit" (click)="onSubmit()" class="btn btn-primary" routerLink="/package-subscription">Home Page</button></div><br>
+        <div class="form-group recharge-done" *ngIf="onclick">
+            <h3 class="heading">Channels added successfully. Account balance is 300 ₹</h3>
+          </div>
+          <div class="form-group recharge-done" *ngIf="onBlankclick">
+                <h3 class="text-info">Please enter valid details</h3>
+              </div>
+      </form> 
+  </div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<router-outlet></router-outlet>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title>Sign in</title>
+</head>
+<body class="body">
+  <div class="main">
+    <p class="sign" align="center">User Sign in</p>
+    <form class="form1" #signInForm="ngForm" >
+      <input class="un " type="text" align="center" 
+       name="email" placeholder="Username" [(ngModel)]="username" >
+      <input class="pass" type="password" align="center" 
+      placeholder="Password" name="password" [(ngModel)]="password">
+      <button type="submit" class="submit" 
+      align="center"(click)="onsubmit()">Sign in</button>
+      <p *ngIf="isInvalid" class="text-danger error" align="center">Invalid Username or Password</p>
+    </form>           
+    </div>   
+</body>
+</html>

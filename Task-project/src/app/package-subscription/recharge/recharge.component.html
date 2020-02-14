@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="background">
+<div class="bg">
+  <div class="recharge-comp">
+    <h1 class="heading">Recharge your Account</h1>
+    <form #rechargeForm="ngForm">
+        <div class="form-group recharge">
+          <label for="exampleInputEmail1" >Enter Recharge Amount</label>
+          <input type="number" class="form-control" name="amount"
+           placeholder="Amount ₹" [(ngModel)]="rechargeAmount">
+          <small id="emailHelp" *ngIf="onEmptyClick" class="form-text text-danger">Enter Valid Amount</small>
+        </div>
+        <div class="form-group recharge">
+          <label for="exampleInputPassword1">Confirm Recharge Amount</label>
+          <input type="number" class="form-control"  name="amount" 
+           placeholder="Amount ₹" [(ngModel)]="rechargeAmount">
+           <small id="emailHelp" *ngIf="onEmptyClick" class="form-text text-danger">Enter Valid Amount</small>
+        </div>
+        <div>
+        <button type="submit" (click)="onSubmit()" [disabled]="onclick" class="btn btn-primary">Recharge Now</button></div><br>
+        <div *ngIf="onclick">
+            <button type="submit" class="btn btn-primary" routerLink="/package-subscription">Home Page</button></div><br>
+        <div class="form-group recharge-done" *ngIf="onclick">
+            <h3 class="heading">Recharge done your Account Balance is {{totalBalance}} ₹</h3>
+          </div>
+      </form> 
+  </div>
+</div>
+</div>
+</body>
+</html>

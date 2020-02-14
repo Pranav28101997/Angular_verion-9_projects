@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="background">
+<div class="bg">
+  <div class="recharge-comp">
+    <h1 class="heading">Subscribe special services</h1>
+    <form #rechargeForm="ngForm">
+        <div class="form-group recharge">
+          <label for="exampleInputEmail1" >Enter special services to Subscribe</label>
+          <input type="text" class="form-control" name="services"
+           placeholder="English Learning or Cooking learning" [(ngModel)]="services">
+           <small *ngIf="onEmptyClick" class="form-text text-info">Enter valid details</small>
+        </div>
+        <div>
+        <button type="submit" (click)="onSubmit()" [disabled]="onclick" class="btn btn-primary">Add Services</button></div><br>
+        <div *ngIf="onclick">
+            <button type="submit" class="btn btn-primary" routerLink="/package-subscription">Home Page</button></div><br>
+        <div class="form-group recharge-done" *ngIf="onclick">
+            <h1 class="heading-success text-success">Service subscribed successfully</h1>
+          </div>
+          <div class="form-group text-bold recharge-done " *ngIf="onclick">
+                <h3 class="heading-success text-success">Email and message notification sent successfully</h3>
+              </div>
+      </form> 
+  </div>
+</div>
+</div>
+</body>
+</html>

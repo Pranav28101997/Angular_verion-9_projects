@@ -1,0 +1,30 @@
+<html>
+<body>
+    <div class="bg">
+      <div class="heading">
+        <h1 >Welcome to SatTv Services</h1>
+      </div>
+      <button type="button" class="btn btn-primary Button" routerLink="/login">Exit</button>
+      <div class="maindiv">
+        <div class="LinkCard-Gallery">
+            <ng-container *ngFor="let details of componentDetails">
+              <div class="LinkCard-container" [routerLink]='details.path'>
+                <div class="content-card">
+                    <div class="Card-Image">
+                      <img src="{{details.imageURL}}" alt="">
+                    </div>
+                    <div class="content-description">
+                      <p class="title" > 
+                        {{details.title}} 
+                      </p>
+                    </div>
+                  </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+    </div>
+    </body>
+    </html>
+
+

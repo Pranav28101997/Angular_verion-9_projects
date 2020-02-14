@@ -1,0 +1,27 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  .background{
+    background-image: url("../../../assets/Images/tata_sky.webp");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .heading-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading {
+      font-family:Georgia, 'Times New Roman', Times, serif; 
+  }
+
+  .sub-header{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .sign-in{
+    width: 11%;
+  }

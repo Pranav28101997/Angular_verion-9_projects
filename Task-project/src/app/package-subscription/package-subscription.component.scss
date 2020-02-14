@@ -1,0 +1,98 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  
+  .bg {
+    /* The image used */
+     background-image: url("../../assets/Images/netflix.webp");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .Button{
+      margin-left: 2%;
+      width:7%;
+    }
+  }
+  .heading {
+      margin-left:31%;
+      font-family:  Georgia, Times, 'Times New Roman', serif;
+      color: aliceblue;
+  }
+  
+
+.maindiv{
+
+.LinkCard-Gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    justify-content: flex-start;
+    margin: 5px 6%;
+    cursor: pointer;
+
+    .LinkCard-container {
+        text-decoration: none !important;
+        transition: box-shadow 0.3s;
+        border-radius: 5px;
+        margin: 16px;
+        width: 20%;
+    }
+
+    .LinkCard-container:hover {
+        box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .content-card {
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+        height: 38vh;
+        background-color: aliceblue;
+      
+        .Card-Image {
+          height: 22vh;
+      
+          img {
+            width: 100% !important;
+            height: 22vh;
+            -o-object-fit: cover;
+            object-fit: cover;
+          }
+        }
+        .content-description {
+          height: 15vh;
+          padding: 20px 10px 0px 10px;
+          overflow: hidden;
+          max-width: 100%;
+      
+          .comp-name {
+            margin: 10px;
+            font-size: medium;
+            color: gray;
+          } 
+      
+          .title {
+            margin: 0px;
+            font-size: large;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+          }
+      
+        }
+      
+      }
+}
+}

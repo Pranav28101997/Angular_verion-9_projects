@@ -1,0 +1,35 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  .background{
+      background-image: url("../../../assets/Images/all.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .recharge-comp{
+      margin-left: 7%;
+      color: aliceblue;
+  }
+  .recharge{
+      width:15%;
+  }
+  .heading-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading {
+      font-family:Georgia, 'Times New Roman', Times, serif; 
+      color: aliceblue;
+  }
+
+  .sub-header{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .recharge-done{
+    width:40%
+  }
